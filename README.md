@@ -69,7 +69,7 @@ void OnDeleteItem_Clicked(object sender, EventArgs e)
  } 
  ```
 
-![Add, Edit, delete the appointment](Schedule.Gif)
+![Add, Edit, delete the appointment](Schedule.gif)
 
 Take a moment to peruse the [WinForms ScheduleControl - Getting Started](https://help.syncfusion.com/windowsforms/scheduler/getting-started) documentation, where you can find about getting started in ScheduleControl, with code examples.
 
