@@ -1,4 +1,5 @@
-﻿using Syncfusion.Schedule;
+﻿using Secheduler_Demo;
+using Syncfusion.Schedule;
 using Syncfusion.Windows.Forms;
 using Syncfusion.Windows.Forms.Schedule;
 using System;
@@ -11,7 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Secheduler_Demo
+namespace Scheduler_Demo
 {
      public partial class AppointmentForm : MetroForm
     {
@@ -83,17 +84,19 @@ namespace Secheduler_Demo
             this.Close();
         }
 
-        void ok_Click(object sender, EventArgs e)
+        void OnAddorEditItem_Clicked(object sender, EventArgs e)
         {
             IScheduleAppointment item;
 
             if (isEdit && currentAppointment != null)
             {
-                item = currentAppointment; // Update existing
+                //Update existing
+                item = currentAppointment; 
             }
             else
             {
-                item = dataProvider.NewScheduleAppointment(); // New
+                //New
+                item = dataProvider.NewScheduleAppointment();
             }
 
             if (item != null)

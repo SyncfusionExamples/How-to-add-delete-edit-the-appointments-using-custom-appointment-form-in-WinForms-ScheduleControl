@@ -1,4 +1,4 @@
-﻿namespace Secheduler_Demo
+﻿namespace Scheduler_Demo
 {
     partial class Form1
     {

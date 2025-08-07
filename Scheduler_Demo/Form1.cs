@@ -1,4 +1,5 @@
-﻿using Syncfusion.Schedule;
+﻿using Secheduler_Demo;
+using Syncfusion.Schedule;
 using Syncfusion.Windows.Forms.Schedule;
 using System;
 using System.Collections.Generic;
@@ -11,7 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Secheduler_Demo
+namespace Scheduler_Demo
 {
     /// <summary>
     /// Summary description for Form1.
@@ -48,7 +49,7 @@ namespace Secheduler_Demo
             this.scheduleControl1.ScheduleType = ScheduleViewType.Month;
             scheduleControl1.DataSource = scheduleProvider;
             scheduleControl1.GetScheduleHost().MouseDown += Form1_MouseDown;
-            //Hook the event for showing the appointment.
+            //Hook the event for showing the appointment form.
             this.scheduleControl1.ShowingAppointmentForm += scheduleControl1_ShowingAppointmentForm;
             grid = this.scheduleControl1.GetScheduleHost();
             ContextMenu menu = new System.Windows.Forms.ContextMenu();
@@ -57,7 +58,7 @@ namespace Secheduler_Demo
             MenuItem item3 = new MenuItem("Delete");
             item.Click += new EventHandler(item_Click);
             item2.Click += new EventHandler(Edititem_Click);
-            item3.Click += new EventHandler(onDeleteItem_Click);
+            item3.Click += new EventHandler(OnDeleteItem_Clicked);
             menu.MenuItems.Add(item);
             menu.MenuItems.Add(item2);
             menu.MenuItems.Add(item3);
@@ -70,8 +71,9 @@ namespace Secheduler_Demo
             appointment = scheduleControl1.GetItemAtPoint(e.Location, out var item);
         }
 
-        void onDeleteItem_Click(object sender, EventArgs e)
+        void OnDeleteItem_Clicked(object sender, EventArgs e)
         {
+            //Remove the appointment
             scheduleProvider.RemoveItem(appointment);
             scheduleControl1.GetScheduleHost().SetDataToDayPanels();
         }
@@ -88,7 +90,6 @@ namespace Secheduler_Demo
             form = new AppointmentForm(this.scheduleControl1);
             form.DataProvider = scheduleProvider;
             form.ShowDialog();
-
         }
 
         ScheduleGrid grid = new ScheduleGrid();
@@ -99,9 +100,9 @@ namespace Secheduler_Demo
         /// </summary>
         void scheduleControl1_ShowingAppointmentForm(object sender, ShowingAppointFormEventArgs e)
         {
-            //Cancel the default appointform for schedule control
+            //Cancel the default appointform for schedule control.
             e.Cancel = true;
-            //Shows the Custom appointment form
+            //Shows the Custom appointment form.
             form.ShowDialog();
         }
         #endregion

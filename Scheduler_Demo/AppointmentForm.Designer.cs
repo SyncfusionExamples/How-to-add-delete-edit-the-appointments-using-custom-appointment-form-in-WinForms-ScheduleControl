@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Secheduler_Demo
+namespace Scheduler_Demo
 {
     partial class AppointmentForm
     {
@@ -242,7 +242,7 @@ namespace Secheduler_Demo
             this.ok.Size = new System.Drawing.Size(75, 23);
             this.ok.TabIndex = 14;
             this.ok.Text = "Ok";
-            this.ok.Click += new System.EventHandler(this.ok_Click);
+            this.ok.Click += new System.EventHandler(this.OnAddorEditItem_Clicked);
             // 
             // cancel
             // 
