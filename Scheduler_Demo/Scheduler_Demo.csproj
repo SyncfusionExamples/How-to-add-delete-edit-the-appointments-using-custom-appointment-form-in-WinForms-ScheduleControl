@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Syncfusion.Grid.Windows"/>
+    <Reference Include="Syncfusion.Grid.Windows" />
     <Reference Include="Syncfusion.Licensing" />
     <Reference Include="Syncfusion.Schedule.Base" />
     <Reference Include="Syncfusion.Schedule.Windows" />

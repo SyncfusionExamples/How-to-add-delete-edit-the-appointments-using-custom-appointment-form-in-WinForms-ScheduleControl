@@ -10,7 +10,7 @@ using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Secheduler_Demo
+namespace Scheduler_Demo
 {
 
     #region DataProvider

@@ -1,4 +1,4 @@
-﻿using Secheduler_Demo;
+﻿using Scheduler_Demo;
 using Syncfusion.Schedule;
 using Syncfusion.Windows.Forms;
 using Syncfusion.Windows.Forms.Schedule;
