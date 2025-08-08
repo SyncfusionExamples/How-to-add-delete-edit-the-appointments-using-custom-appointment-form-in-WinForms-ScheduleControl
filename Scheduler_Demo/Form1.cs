@@ -171,6 +171,7 @@ namespace Scheduler_Demo
             //Application.EnableVisualStyles();
             Application.Run(new Form1());
         }
+
         private string GetIconFile(string bitmapName)
         {
             for (int n = 0; n < 10; n++)
@@ -183,6 +184,7 @@ namespace Scheduler_Demo
 
             return bitmapName;
         }
+
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
@@ -197,6 +199,7 @@ namespace Scheduler_Demo
             }
             base.Dispose(disposing);
         }
+
         //utility that looks for the file in the project folder up from the exe folder
         private bool FindFile(ref string fileName)
         {
@@ -208,7 +211,6 @@ namespace Scheduler_Demo
             }
             return File.Exists(fileName);
         }
-
 
         #endregion
 

@@ -15,7 +15,7 @@ using System.Windows.Forms;
 namespace Scheduler_Demo
 {
      public partial class AppointmentForm : MetroForm
-    {
+     {
         private ScheduleControl schedulegrid;
         private IScheduleAppointment currentAppointment = null;
         private bool isEdit = false;
@@ -32,9 +32,9 @@ namespace Scheduler_Demo
             InitializeComponent();
             schedulegrid = control;
             currentAppointment = appointmentToEdit;
-            isEdit = true;
-            
+            isEdit = true;            
         }
+
         private void LoadAppointmentData()
         {
             if (currentAppointment != null)
@@ -45,7 +45,9 @@ namespace Scheduler_Demo
                 this.comboBox1.SelectedIndex = currentAppointment.LabelValue ;
             }
         }
+
         private SimpleScheduleDataProvider dataProvider;
+
         public SimpleScheduleDataProvider DataProvider
         {
             get
@@ -118,5 +120,5 @@ namespace Scheduler_Demo
             
             this.Close();
         }
-    }
+     }
 }

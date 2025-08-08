@@ -294,12 +294,7 @@ namespace Scheduler_Demo
             ((System.ComponentModel.ISupportInitialize)(this.EndTimeDateTimePickerAdv)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
-
-
-
-
 
         private Syncfusion.Windows.Forms.Tools.TextBoxExt SubjectTextBoxExt;
         private Syncfusion.Windows.Forms.Tools.DateTimePickerAdv StartDateDateTimePickerAdv;

@@ -25,7 +25,6 @@ namespace Scheduler_Demo
     /// </remarks>
     public class SimpleScheduleDataProvider : ScheduleDataProvider
     {
-
         /// <summary>
         /// Default constructor.
         /// </summary>
@@ -169,6 +168,7 @@ namespace Scheduler_Demo
 
             return masterList;
         }
+
         private static void DisplayList(string title, ScheduleAppointmentList list)
         {
 #if console
