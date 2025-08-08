@@ -253,7 +253,6 @@ namespace Scheduler_Demo
             }
         }
 
-
         /// <summary>
         /// Saves the current <see cref="MasterList"/> object in binary format to a file 
         /// with the specified filename.
