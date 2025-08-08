@@ -52,7 +52,6 @@ namespace Scheduler_Demo
             set { masterList = value; }
         }
 
-
         #region random data
 
         /// <summary>
@@ -79,11 +78,8 @@ namespace Scheduler_Demo
             for (int i = 0; i < count; ++i)
             {
                 ScheduleAppointment item = masterList.NewScheduleAppointment() as ScheduleAppointment;
-
                 int dayOffSet = 30 - r.Next(60);
-
                 int hourOffSet = 24 - r.Next(48);
-
                 int len = 30 * (r.Next(4) + 1);
                 item.StartTime = now.AddDays((double)dayOffSet).AddHours((double)hourOffSet); ;
                 item.EndTime = item.StartTime.AddMinutes((double)len);
@@ -91,12 +87,9 @@ namespace Scheduler_Demo
                 item.Content = string.Format("content{0}", i);
                 item.LabelValue = r1.Next(10) < 3 ? 0 : r1.Next(10);
                 item.LocationValue = string.Format("location{0}", r1.Next(5));
-
                 item.ReminderValue = r1.Next(10) < 5 ? 0 : r1.Next(12);
                 item.Reminder = r1.Next(10) > 1;
                 item.AllDay = r1.Next(10) < 1;
-
-
                 item.MarkerValue = r1.Next(4);
                 item.Dirty = false;
                 masterList.Add(item);
@@ -105,7 +98,6 @@ namespace Scheduler_Demo
             ////set explicit values if needed for testing...
             //masterList[142].Reminder = true;
             //masterList[142].ReminderValue = 9;//  hrs; // 7;//3 hrs
-
 
             //DisplayList("Before Sort", masterList);
             masterList.SortStartTime();
@@ -134,24 +126,18 @@ namespace Scheduler_Demo
             for (int i = 0; i < count; ++i)
             {
                 ScheduleAppointment item = masterList.NewScheduleAppointment() as ScheduleAppointment;
-
                 int dayOffSet = 30 - r.Next(60);
-
                 int hourOffSet = 24 - r.Next(48);
-
                 int len = 30 * (r.Next(4) + 1);
-                item.StartTime = now.AddDays((double)dayOffSet).AddHours((double)hourOffSet); ;
+                item.StartTime = now.AddDays((double)dayOffSet).AddHours((double)hourOffSet);
                 item.EndTime = item.StartTime.AddMinutes((double)len);
                 item.Subject = string.Format("subject{0}", i);
                 item.Content = string.Format("content{0}", i);
                 item.LabelValue = r1.Next(10) < 3 ? 0 : r1.Next(10);
                 item.LocationValue = string.Format("location{0}", r1.Next(5));
-
                 item.ReminderValue = r1.Next(10) < 5 ? 0 : r1.Next(12);
                 item.Reminder = r1.Next(10) > 1;
                 item.AllDay = r1.Next(10) < 1;
-
-
                 item.MarkerValue = r1.Next(4);
                 item.Dirty = false;
                 masterList.Add(item);
@@ -160,7 +146,6 @@ namespace Scheduler_Demo
             ////set explicit values if needed for testing...
             //masterList[142].Reminder = true;
             //masterList[142].ReminderValue = 9;//  hrs; // 7;//3 hrs
-
 
             //DisplayList("Before Sort", masterList);
             masterList.SortStartTime();
@@ -290,7 +275,6 @@ namespace Scheduler_Demo
             b.Serialize(s, this.MasterList);
         }
 
-
         /// <summary>
         /// Creates an instance of <see cref="SimpleScheduleDataProvider"/> and loads 
         /// a previously serialized MasterList into the instance.
@@ -376,7 +360,6 @@ namespace Scheduler_Demo
 
         #endregion
 
-
         /// <summary>
         /// Override to control serialization.
         /// </summary>
@@ -386,7 +369,6 @@ namespace Scheduler_Demo
         {
             info.AddValue("List", this.List);
         }
-
 
         #endregion
 
@@ -416,8 +398,6 @@ namespace Scheduler_Demo
         {
             return new SimpleScheduleAppointment();
         }
-
-
     }
     #endregion
 
@@ -457,7 +437,6 @@ namespace Scheduler_Demo
             this.EndTime = (DateTime)info.GetValue("EndTime", typeof(DateTime));
             this.Content = (string)info.GetValue("Content", typeof(string));
             this.AllDay = (bool)info.GetValue("AllDay", typeof(bool));
-
             this.Dirty = false;
         }
 
@@ -483,9 +462,7 @@ namespace Scheduler_Demo
 
             //info.AddValue("Tag", this.Tag); assume Tag not serializable in this implemetation
         }
-
         #endregion
-
     }
     #endregion
 }
